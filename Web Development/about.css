@@ -1,0 +1,41 @@
+body{
+    margin:0;
+    padding: 0;
+    font-family: Arial,  sans-serif;
+    background-image: url("b_c2.jpg");
+    background-size: cover;
+    background-position: center;
+    color:#fff;
+}
+header{
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(0,0,0,0.7);
+}
+header h1{
+    margin: 0;
+    font-size: 2em;
+
+}
+header p{
+    margin:50px 0;
+    font-size: 1.2em;
+    
+}
+.about-us{
+    padding:50px;
+    background-color: (255,255,255,0.9);
+}
+.about-us h2{
+color: #333;
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.7);
+}
+
+footer p{
+    margin: 0;
+    font-size: 0.8em;
+}
