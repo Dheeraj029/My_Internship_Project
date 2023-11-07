@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Registration</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="myForm" action="">
+            <h1>Registration form</h1>
+        
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Enter your name" required>
+                    <i class='bx bxs-user-circle'></i>
+                </div>
+                <div class="input-field">
+                    <input type="date" required>
+                    <i class='bx bxs-calendar'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="email" placeholder="Enter your email" required>
+                    <i class='bx bxl-gmail'></i>
+                </div>
+                <div class="input-field">
+                    <input type="number" placeholder="Enter your phone number" required>
+                    <i class='bx bxs-phone-call'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Enter your address" required>
+                    <i class='bx bxs-home-circle'></i>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Enter username" required>
+                    <i class='bx bxs-user-circle'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="Password" id="password" placeholder="Enter password" required>
+                    <i class='bx bxs-lock'></i>
+                </div>
+                <div class="input-field">
+                    <input type="Password" id="confirmPassword" placeholder="Confirm Password" required>
+                    <i class='bx bxs-lock'></i>
+                </div>
+            </div>
+
+            <label><input type="checkbox">I hereby declare that all the information I have provided is correct</label>
+
+            <button type="submit" id="Register" class="btn">Register</button>
+        </form>
+    </div>
+    <div id="Registration" style="display: none;">
+        <p>Registration successful!</p>
+    </div>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+            if (password !== confirmPassword) {
+                alert("Passwords do not match. Please try again.");
+            } else {
+                document.getElementById('Registration').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
